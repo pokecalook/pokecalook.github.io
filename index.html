@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EH0SVLFEJM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EH0SVLFEJM');</script>
+<title>ポケカるっく - ポケモンカード相場チェッカー</title>
+<meta name="description" content="ポケモンカードの相場をリアルタイムでチェック。PSA10・美品・未開封BOXの価格推移と週間ランキングを毎日更新。">
+<meta name="keywords" content="ポケカるっく,ポケカルック,ぽけかるっく,ぽけかルック,pokecalook,PokeCalook,ポケモンカード,PSA10,相場,倍率,美品,鑑定">
+<link rel="canonical" href="https://pokecalook.com/">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="stylesheet" href="common.css">
+<meta property="og:title" content="ポケカるっく - ポケモンカード相場チェッカー">
+<meta property="og:description" content="ポケモンカードの相場をリアルタイムでチェック。PSA10・美品・未開封BOXの価格推移と週間ランキングを毎日更新。">
+<meta property="og:image" content="https://pokecalook.com/images/logo.png">
+<meta property="og:url" content="https://pokecalook.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<style>
+.container{max-width:1100px;margin:0 auto}
+body{padding:20px 16px;line-height:1.6}
+.hdr .desc{color:#374151;font-size:.8rem;margin-top:12px;line-height:1.6;max-width:700px;margin-left:auto;margin-right:auto;background:rgba(255,255,255,.92);padding:12px 16px;border-radius:10px;border:1px solid #e5e7eb}
+.hdr .desc a{color:#d97706;text-decoration:none;font-weight:600}
+.promo-note{text-align:center;font-size:.7rem;color:#9ca3af;margin-bottom:20px}
+.updated{text-align:center;font-size:.75rem;color:#9ca3af;margin-bottom:28px}
+.ranking-block{margin-bottom:40px}
+.ranking-block h2{font-size:1.3rem;font-weight:800;margin-bottom:14px;padding:10px 16px;background:#fff3e0;border-left:5px solid #ea580c;border-radius:0 8px 8px 0;color:#1a1a2e}
+.tabs{display:flex;gap:6px;margin-bottom:16px}
+.tab-btn{
+  padding:8px 18px;border-radius:8px;font-size:.85rem;font-weight:700;
+  border:2px solid #e5e7eb;background:#fff;color:#6b7280;cursor:pointer;transition:all .2s;
+}
+.tab-btn.active{border-color:#ea580c;background:#ea580c;color:#fff}
+.tab-btn:hover:not(.active){border-color:#d1d5db;background:#f9fafb}
+.tab-content{
+  display:none;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:4px 0 12px;-webkit-overflow-scrolling:touch;
+}
+.tab-content.active{display:flex}
+.tab-content::-webkit-scrollbar{height:5px}
+.tab-content::-webkit-scrollbar-track{background:#f3f4f6;border-radius:3px}
+.tab-content::-webkit-scrollbar-thumb{background:#d1d5db;border-radius:3px}
+.card{
+  position:relative;min-width:180px;max-width:180px;scroll-snap-align:start;
+  background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);
+  border-radius:14px;padding:14px 10px 14px;text-align:center;
+  text-decoration:none;color:inherit;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.04);
+  transition:transform .2s,box-shadow .2s;
+  display:flex;flex-direction:column;align-items:center;flex-shrink:0;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.1)}
+.rank-badge{
+  position:absolute;top:8px;left:8px;
+  padding:3px 10px;border-radius:6px;
+  font-size:.75rem;font-weight:900;color:#fff;
+}
+.rank-1{background:linear-gradient(135deg,#f59e0b,#d97706)}
+.rank-2{background:linear-gradient(135deg,#9ca3af,#6b7280)}
+.rank-3{background:linear-gradient(135deg,#d97706,#92400e)}
+.rank-4,.rank-5,.rank-other{background:#e5e7eb;color:#374151}
+.card-img{
+  width:150px;height:200px;object-fit:contain;border-radius:8px;margin:8px 0;
+  background:#f9fafb;
+}
+.card-img-placeholder{
+  width:150px;height:200px;border-radius:8px;margin:8px 0;
+  background:linear-gradient(135deg,#f3f4f6,#e5e7eb);
+  display:flex;align-items:center;justify-content:center;font-size:2.5rem;color:#9ca3af;
+}
+.card-name{
+  font-size:.82rem;font-weight:700;margin-top:8px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%;
+}
+.card-price{font-size:.9rem;color:#111827;margin-top:4px;font-weight:800}
+.card-change{font-size:.9rem;font-weight:800;margin-top:6px;padding:3px 10px;border-radius:6px}
+.change-up{color:#0d9488;background:#f0fdfa}
+.change-down{color:#dc2626;background:#fef2f2}
+.note{font-size:.72rem;color:#9ca3af;margin-top:12px;text-align:center}
+.footer{
+  text-align:center;padding:24px;margin-top:24px;
+  font-size:.75rem;color:#6b7280;border-top:1px solid #f3f4f6;
+}
+.footer a{color:#6b7280;text-decoration:none;margin:0 8px}
+.footer a:hover{color:#374151}
+@media(max-width:480px){
+  .card{min-width:150px;max-width:150px}
+  .card-img,.card-img-placeholder{width:120px;height:160px}
+}
+</style>
+</head>
+<body>
+<header class="hdr" style="background:url('images/header-bg.png') center/cover no-repeat"><h1><a href="index.html"><img src="images/logo.png" alt="ポケカるっく" class="logo-img"> ポケカるっく</a></h1><p class="sub">ポケカるっく（ポケカルック / pokecalook）はポケモンカードの相場チェックに役立つ無料データベースです</p></header>
+<div class="container">
+  <nav class="nav-buttons"><a href="index.html" class="nav-btn nav-btn-top active">🏠 TOP</a><a href="report.html" class="nav-btn nav-btn-single">🃏 シングル相場</a><a href="box.html" class="nav-btn nav-btn-box">📦 未開封BOX</a><a href="articles/index.html" class="nav-btn nav-btn-articles">📰 記事</a><a href="index-chart.html" class="nav-btn nav-btn-index">📊 ポケカ指数</a><a href="portfolio.html" class="nav-btn nav-btn-portfolio">📋 持ってるリスト</a></nav>
+  <p class="promo-note">※ 本サイトにはプロモーションが含まれています。</p>
+  <p class="updated">最終更新: 2026/09/01 17:04 JST</p>
+
+  <!-- 高騰ランキング -->
+  <div class="ranking-block" id="block-rising">
+    <h2>🔥 高騰ランキング</h2>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('rising','psa10',this)">PSA10</button>
+      <button class="tab-btn" onclick="switchTab('rising','bihin',this)">美品</button>
+      <button class="tab-btn" onclick="switchTab('rising','box',this)">BOX</button>
+    </div>
+    <div class="tab-content active" id="rising-psa10">
+      <a href="cards/93085.html" class="card">
+        <span class="rank-badge rank-1">1位</span>
+        <img src="images/93085.webp" alt="イーブイGX SR: SA [SM12a 188/173]" class="card-img" loading="lazy">
+        <div class="card-name">イーブイGX SR: SA [SM12a 188/173]</div>
+        <div class="card-price">¥260,000</div>
+        <div class="card-change change-up">+¥40,000</div>
+      </a>
+      <a href="cards/704407.html" class="card">
+        <span class="rank-badge rank-2">2位</span>
+        <img src="images/704407.webp" alt="メガリザードンXex MUR" class="card-img" loading="lazy">
+        <div class="card-name">メガリザードンXex MUR</div>
+        <div class="card-price">¥487,000</div>
+        <div class="card-change change-up">+¥17,000</div>
+      </a>
+      <a href="cards/127727.html" class="card">
+        <span class="rank-badge rank-3">3位</span>
+        <img src="images/127727.webp" alt="セレビィ&amp;フシギバナGX SR: SA [SM9 097/095]" class="card-img" loading="lazy">
+        <div class="card-name">セレビィ&amp;フシギバナGX SR: SA [SM9 097/095]</div>
+        <div class="card-price">¥105,000</div>
+        <div class="card-change change-up">+¥16,000</div>
+      </a>
+      <a href="cards/91317.html" class="card">
+        <span class="rank-badge rank-4">4位</span>
+        <img src="images/91317.webp" alt="シロナ SR" class="card-img" loading="lazy">
+        <div class="card-name">シロナ SR</div>
+        <div class="card-price">¥183,000</div>
+        <div class="card-change change-up">+¥13,000</div>
+      </a>
+      <a href="cards/93082.html" class="card">
+        <span class="rank-badge rank-5">5位</span>
+        <img src="images/93082.webp" alt="ブラッキー&amp;ダークライGX SR: SA [SM12a 182/173]" class="card-img" loading="lazy">
+        <div class="card-name">ブラッキー&amp;ダークライGX SR: SA [SM12a 182/173]</div>
+        <div class="card-price">¥350,000</div>
+        <div class="card-change change-up">+¥11,000</div>
+      </a>
+      <a href="cards/91274.html" class="card">
+        <span class="rank-badge rank-other">6位</span>
+        <img src="images/91274.webp" alt="アルセウス&amp;ディアルガ&amp;パルキアGX SR: SA (三神) [SM12 100/095]" class="card-img" loading="lazy">
+        <div class="card-name">アルセウス&amp;ディアルガ&amp;パルキアGX SR: SA (三神) [SM12 100/095]</div>
+        <div class="card-price">¥245,000</div>
+        <div class="card-change change-up">+¥11,000</div>
+      </a>
+      <a href="cards/96710.html" class="card">
+        <span class="rank-badge rank-other">7位</span>
+        <img src="images/96710.webp" alt="アスナ SR" class="card-img" loading="lazy">
+        <div class="card-name">アスナ SR</div>
+        <div class="card-price">¥17,000</div>
+        <div class="card-change change-up">+¥6,000</div>
+      </a>
+      <a href="cards/224088.html" class="card">
+        <span class="rank-badge rank-other">8位</span>
+        <img src="images/224088.webp" alt="サザレ SAR" class="card-img" loading="lazy">
+        <div class="card-name">サザレ SAR</div>
+        <div class="card-price">¥38,000</div>
+        <div class="card-change change-up">+¥5,501</div>
+      </a>
+      <a href="cards/120748.html" class="card">
+        <span class="rank-badge rank-other">9位</span>
+        <img src="images/120748.webp" alt="ナンジャモ SAR" class="card-img" loading="lazy">
+        <div class="card-name">ナンジャモ SAR</div>
+        <div class="card-price">¥92,200</div>
+        <div class="card-change change-up">+¥5,201</div>
+      </a>
+      <a href="cards/109865.html" class="card">
+        <span class="rank-badge rank-other">10位</span>
+        <img src="images/109865.webp" alt="サーナイトex SAR" class="card-img" loading="lazy">
+        <div class="card-name">サーナイトex SAR</div>
+        <div class="card-price">¥45,000</div>
+        <div class="card-change change-up">+¥5,001</div>
+      </a>
+    </div>
+    <div class="tab-content" id="rising-bihin">
+      <a href="cards/585230.html" class="card">
+        <span class="rank-badge rank-1">1位</span>
+        <img src="images/585230.webp" alt="ビクティニ P" class="card-img" loading="lazy">
+        <div class="card-name">ビクティニ P</div>
+        <div class="card-price">¥151,000</div>
+        <div class="card-change change-up">+¥13,000</div>
+      </a>
+      <a href="cards/105553.html" class="card">
+        <span class="rank-badge rank-2">2位</span>
+        <img src="images/105553.webp" alt="ピカチュウ AR" class="card-img" loading="lazy">
+        <div class="card-name">ピカチュウ AR</div>
+        <div class="card-price">¥61,350</div>
+        <div class="card-change change-up">+¥6,350</div>
+      </a>
+      <a href="cards/91279.html" class="card">
+        <span class="rank-badge rank-3">3位</span>
+        <img src="images/91279.webp" alt="ソルガレオ&amp;ルナアーラGX (リーリエ) SR :SA (ソルルナGX) [SM11b 063/049]" class="card-img" loading="lazy">
+        <div class="card-name">ソルガレオ&amp;ルナアーラGX (リーリエ) SR :SA (ソルルナGX) [SM11b 063/049]</div>
+        <div class="card-price">¥58,000</div>
+        <div class="card-change change-up">+¥6,200</div>
+      </a>
+      <a href="cards/585213.html" class="card">
+        <span class="rank-badge rank-4">4位</span>
+        <img src="images/585213.webp" alt="ゼクロムex BWR [SV11B 174/086]" class="card-img" loading="lazy">
+        <div class="card-name">ゼクロムex BWR [SV11B 174/086]</div>
+        <div class="card-price">¥82,800</div>
+        <div class="card-change change-up">+¥5,300</div>
+      </a>
+      <a href="cards/471633.html" class="card">
+        <span class="rank-badge rank-5">5位</span>
+        <img src="images/471633.webp" alt="ブラッキー :マスターボールミラー [SV8a 092/187]" class="card-img" loading="lazy">
+        <div class="card-name">ブラッキー :マスターボールミラー [SV8a 092/187]</div>
+        <div class="card-price">¥22,000</div>
+        <div class="card-change change-up">+¥4,000</div>
+      </a>
+      <a href="cards/396034.html" class="card">
+        <span class="rank-badge rank-other">6位</span>
+        <img src="images/396034.webp" alt="ミュウツー&amp;ミュウGX RR" class="card-img" loading="lazy">
+        <div class="card-name">ミュウツー&amp;ミュウGX RR</div>
+        <div class="card-price">¥12,000</div>
+        <div class="card-change change-up">+¥3,000</div>
+      </a>
+      <a href="cards/164250.html" class="card">
+        <span class="rank-badge rank-other">7位</span>
+        <img src="images/164250.webp" alt="ミュウex SAR" class="card-img" loading="lazy">
+        <div class="card-name">ミュウex SAR</div>
+        <div class="card-price">¥77,777</div>
+        <div class="card-change change-up">+¥2,777</div>
+      </a>
+      <a href="cards/753274.html" class="card">
+        <span class="rank-badge rank-other">8位</span>
+        <img src="images/753274.webp" alt="メイのはげまし SAR" class="card-img" loading="lazy">
+        <div class="card-name">メイのはげまし SAR</div>
+        <div class="card-price">¥14,500</div>
+        <div class="card-change change-up">+¥2,000</div>
+      </a>
+      <a href="cards/96741.html" class="card">
+        <span class="rank-badge rank-other">9位</span>
+        <img src="images/96741.webp" alt="ピカチュウV [SI 415/414]" class="card-img" loading="lazy">
+        <div class="card-name">ピカチュウV [SI 415/414]</div>
+        <div class="card-price">¥25,000</div>
+        <div class="card-change change-up">+¥2,000</div>
+      </a>
+      <a href="cards/96726.html" class="card">
+        <span class="rank-badge rank-other">10位</span>
+        <img src="images/96726.webp" alt="ニンフィアVMAX CSR" class="card-img" loading="lazy">
+        <div class="card-name">ニンフィアVMAX CSR</div>
+        <div class="card-price">¥12,800</div>
+        <div class="card-change change-up">+¥1,800</div>
+      </a>
+    </div>
+    <div class="tab-content" id="rising-box">
+      <a href="box/881421.html" class="card">
+        <span class="rank-badge rank-1">1位</span>
+        <img src="images/box_881421.webp" alt="拡張パック「30周年 セレブレーション」ボックス" class="card-img" loading="lazy">
+        <div class="card-name">拡張パック「30周年 セレブレーション」ボックス</div>
+        <div class="card-price">¥44,899</div>
+        <div class="card-change change-up">+¥8,067</div>
+      </a>
+      <a href="box/881423.html" class="card">
+        <span class="rank-badge rank-2">2位</span>
+        <img src="images/box_881423.webp" alt="構築デッキ「30周年 セレブレーション プレミアムデッキセット エーフィ・ブラッキー」" class="card-img" loading="lazy">
+        <div class="card-name">構築デッキ「30周年 セレブレーション プレミアムデッキセット エーフィ・ブラッキー」</div>
+        <div class="card-price">¥59,999</div>
+        <div class="card-change change-up">+¥6,400</div>
+      </a>
+      <a href="box/881424.html" class="card">
+        <span class="rank-badge rank-3">3位</span>
+        <img src="images/box_881424.webp" alt="特別セット「30周年 セレブレーション フューチャリスティックボックス」" class="card-img" loading="lazy">
+        <div class="card-name">特別セット「30周年 セレブレーション フューチャリスティックボックス」</div>
+        <div class="card-price">¥110,000</div>
+        <div class="card-change change-up">+¥6,000</div>
+      </a>
+      <a href="box/98947.html" class="card">
+        <span class="rank-badge rank-4">4位</span>
+        <img src="images/box_98947.webp" alt="スペシャルデッキセット リザードンVSTAR vs レックウザVMAX" class="card-img" loading="lazy">
+        <div class="card-name">スペシャルデッキセット リザードンVSTAR vs レックウザVMAX</div>
+        <div class="card-price">¥18,333</div>
+        <div class="card-change change-up">+¥3,344</div>
+      </a>
+      <a href="box/14024.html" class="card">
+        <span class="rank-badge rank-5">5位</span>
+        <img src="images/box_14024.webp" alt="拡張パック フュージョンアーツ ボックス" class="card-img" loading="lazy">
+        <div class="card-name">拡張パック フュージョンアーツ ボックス</div>
+        <div class="card-price">¥58,999</div>
+        <div class="card-change change-up">+¥3,109</div>
+      </a>
+      <a href="box/584776.html" class="card">
+        <span class="rank-badge rank-other">6位</span>
+        <img src="images/box_584776.webp" alt="拡張パックデラックス「ホワイトフレア」ボックス" class="card-img" loading="lazy">
+        <div class="card-name">拡張パックデラックス「ホワイトフレア」ボックス</div>
+        <div class="card-price">¥24,444</div>
+        <div class="card-change change-up">+¥1,444</div>
+      </a>
+      <a href="box/118914.html" class="card">
+        <span class="rank-badge rank-other">7位</span>
+        <img src="images/box_118914.webp" alt="強化拡張パック「ポケモンカード151」ボックス" class="card-img" loading="lazy">
+        <div class="card-name">強化拡張パック「ポケモンカード151」ボックス</div>
+        <div class="card-price">¥59,800</div>
+        <div class="card-change change-up">+¥1,037</div>
+      </a>
+      <a href="box/86213.html" class="card">
+        <span class="rank-badge rank-other">8位</span>
+        <img src="images/box_86213.webp" alt="拡張パック ロストアビス ボックス" class="card-img" loading="lazy">
+        <div class="card-name">拡張パック ロストアビス ボックス</div>
+        <div class="card-price">¥54,800</div>
+        <div class="card-change change-up">+¥1,000</div>
+      </a>
+      <a href="box/395189.html" class="card">
+        <span class="rank-badge rank-other">9位</span>
+        <img src="images/box_395189.webp" alt="拡張パック「超電ブレイカー」ボックス" class="card-img" loading="lazy">
+        <div class="card-name">拡張パック「超電ブレイカー」ボックス</div>
+        <div class="card-price">¥33,395</div>
+        <div class="card-change change-up">+¥895</div>
+      </a>
+      <a href="box/89881.html" class="card">
+        <span class="rank-badge rank-other">10位</span>
+        <img src="images/box_89881.webp" alt="強化拡張パック「白熱のアルカナ」ボックス" class="card-img" loading="lazy">
+        <div class="card-name">強化拡張パック「白熱のアルカナ」ボックス</div>
+        <div class="card-price">¥12,000</div>
+        <div class="card-change change-up">+¥520</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- 下落ランキング -->
+  <div class="ranking-block" id="block-falling">
+    <h2>📉 下落ランキング</h2>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('falling','psa10',this)">PSA10</button>
+      <button class="tab-btn" onclick="switchTab('falling','bihin',this)">美品</button>
+      <button class="tab-btn" onclick="switchTab('falling','box',this)">BOX</button>
+    </div>
+    <div class="tab-content active" id="falling-psa10">
+      <a href="cards/737036.html" class="card">
+        <span class="rank-badge rank-1">1位</span>
+        <img src="images/737036.webp" alt="ピカチュウex SAR仕様" class="card-img" loading="lazy">
+        <div class="card-name">ピカチュウex SAR仕様</div>
+        <div class="card-price">¥314,000</div>
+        <div class="card-change change-down">-¥26,000</div>
+      </a>
+      <a href="cards/868770.html" class="card">
+        <span class="rank-badge rank-2">2位</span>
+        <img src="images/868770.webp" alt="メガレックウザex MUR" class="card-img" loading="lazy">
+        <div class="card-name">メガレックウザex MUR</div>
+        <div class="card-price">¥680,000</div>
+        <div class="card-change change-down">-¥20,000</div>
+      </a>
+      <a href="cards/91156.html" class="card">
+        <span class="rank-badge rank-3">3位</span>
+        <img src="images/91156.webp" alt="リザードン: プロモ [S8a-P 001/025]" class="card-img" loading="lazy">
+        <div class="card-name">リザードン: プロモ [S8a-P 001/025]</div>
+        <div class="card-price">¥109,150</div>
+        <div class="card-change change-down">-¥19,450</div>
+      </a>
+      <a href="cards/91154.html" class="card">
+        <span class="rank-badge rank-4">4位</span>
+        <img src="images/91154.webp" alt="ピカチュウVMAX UR" class="card-img" loading="lazy">
+        <div class="card-name">ピカチュウVMAX UR</div>
+        <div class="card-price">¥46,000</div>
+        <div class="card-change change-down">-¥18,000</div>
+      </a>
+      <a href="cards/585230.html" class="card">
+        <span class="rank-badge rank-5">5位</span>
+        <img src="images/585230.webp" alt="ビクティニ P" class="card-img" loading="lazy">
+        <div class="card-name">ビクティニ P</div>
+        <div class="card-price">¥335,000</div>
+        <div class="card-change change-down">-¥15,000</div>
+      </a>
+      <a href="cards/93016.html" class="card">
+        <span class="rank-badge rank-other">6位</span>
+        <img src="images/93016.webp" alt="ミュウVMAX HR: SA [S8 119/100]" class="card-img" loading="lazy">
+        <div class="card-name">ミュウVMAX HR: SA [S8 119/100]</div>
+        <div class="card-price">¥238,000</div>
+        <div class="card-change change-down">-¥14,100</div>
+      </a>
+      <a href="cards/128212.html" class="card">
+        <span class="rank-badge rank-other">7位</span>
+        <img src="images/128212.webp" alt="ゲンガー R: マスターボールミラー [SV2a 094/165]" class="card-img" loading="lazy">
+        <div class="card-name">ゲンガー R: マスターボールミラー [SV2a 094/165]</div>
+        <div class="card-price">¥239,750</div>
+        <div class="card-change change-down">-¥11,250</div>
+      </a>
+      <a href="cards/91118.html" class="card">
+        <span class="rank-badge rank-other">8位</span>
+        <img src="images/91118.webp" alt="ピカチュウ: プロモ [S-P 227]" class="card-img" loading="lazy">
+        <div class="card-name">ピカチュウ: プロモ [S-P 227]</div>
+        <div class="card-price">¥600,000</div>
+        <div class="card-change change-down">-¥10,000</div>
+      </a>
+      <a href="cards/110938.html" class="card">
+        <span class="rank-badge rank-other">9位</span>
+        <img src="images/110938.webp" alt="ミモザ SAR" class="card-img" loading="lazy">
+        <div class="card-name">ミモザ SAR</div>
+        <div class="card-price">¥39,850</div>
+        <div class="card-change change-down">-¥8,650</div>
+      </a>
+      <a href="cards/98531.html" class="card">
+        <span class="rank-badge rank-other">10位</span>
+        <img src="images/98531.webp" alt="ミュウex: プロモ [S8a-P 014/025]" class="card-img" loading="lazy">
+        <div class="card-name">ミュウex: プロモ [S8a-P 014/025]</div>
+        <div class="card-price">¥30,500</div>
+        <div class="card-change change-down">-¥8,500</div>
+      </a>
+    </div>
+    <div class="tab-content" id="falling-bihin">
+      <a href="cards/737036.html" class="card">
+        <span class="rank-badge rank-1">1位</span>
+        <img src="images/737036.webp" alt="ピカチュウex SAR仕様" class="card-img" loading="lazy">
+        <div class="card-name">ピカチュウex SAR仕様</div>
+        <div class="card-price">¥180,000</div>
+        <div class="card-change change-down">-¥39,000</div>
+      </a>
+      <a href="cards/868770.html" class="card">
+        <span class="rank-badge rank-2">2位</span>
+        <img src="images/868770.webp" alt="メガレックウザex MUR" class="card-img" loading="lazy">
+        <div class="card-name">メガレックウザex MUR</div>
+        <div class="card-price">¥160,000</div>
+        <div class="card-change change-down">-¥39,000</div>
+      </a>
+      <a href="cards/704407.html" class="card">
+        <span class="rank-badge rank-3">3位</span>
+        <img src="images/704407.webp" alt="メガリザードンXex MUR" class="card-img" loading="lazy">
+        <div class="card-name">メガリザードンXex MUR</div>
+        <div class="card-price">¥190,000</div>
+        <div class="card-change change-down">-¥16,666</div>
+      </a>
+      <a href="cards/128121.html" class="card">
+        <span class="rank-badge rank-4">4位</span>
+        <img src="images/128121.webp" alt="ミュウex SAR" class="card-img" loading="lazy">
+        <div class="card-name">ミュウex SAR</div>
+        <div class="card-price">¥48,400</div>
+        <div class="card-change change-down">-¥16,600</div>
+      </a>
+      <a href="cards/868612.html" class="card">
+        <span class="rank-badge rank-5">5位</span>
+        <img src="images/868612.webp" alt="メガレックウザex SAR" class="card-img" loading="lazy">
+        <div class="card-name">メガレックウザex SAR</div>
+        <div class="card-price">¥60,000</div>
+        <div class="card-change change-down">-¥13,999</div>
+      </a>
+      <a href="cards/100567.html" class="card">
+        <span class="rank-badge rank-other">6位</span>
+        <img src="images/100567.webp" alt="ルギアV SR:SA [s12 110/098]" class="card-img" loading="lazy">
+        <div class="card-name">ルギアV SR:SA [s12 110/098]</div>
+        <div class="card-price">¥130,000</div>
+        <div class="card-change change-down">-¥13,000</div>
+      </a>
+      <a href="cards/93015.html" class="card">
+        <span class="rank-badge rank-other">7位</span>
+        <img src="images/93015.webp" alt="_のピカチュウ: プロモ (お誕生日ピカチュウ) [S8a-P 007/025]" class="card-img" loading="lazy">
+        <div class="card-name">_のピカチュウ: プロモ (お誕生日ピカチュウ) [S8a-P 007/025]</div>
+        <div class="card-price">¥60,000</div>
+        <div class="card-change change-down">-¥10,450</div>
+      </a>
+      <a href="cards/776371.html" class="card">
+        <span class="rank-badge rank-other">8位</span>
+        <img src="images/776371.webp" alt="メガゲッコウガex MUR" class="card-img" loading="lazy">
+        <div class="card-name">メガゲッコウガex MUR</div>
+        <div class="card-price">¥79,999</div>
+        <div class="card-change change-down">-¥9,501</div>
+      </a>
+      <a href="cards/93085.html" class="card">
+        <span class="rank-badge rank-other">9位</span>
+        <img src="images/93085.webp" alt="イーブイGX SR: SA [SM12a 188/173]" class="card-img" loading="lazy">
+        <div class="card-name">イーブイGX SR: SA [SM12a 188/173]</div>
+        <div class="card-price">¥111,500</div>
+        <div class="card-change change-down">-¥8,500</div>
+      </a>
+      <a href="cards/120748.html" class="card">
+        <span class="rank-badge rank-other">10位</span>
+        <img src="images/120748.webp" alt="ナンジャモ SAR" class="card-img" loading="lazy">
+        <div class="card-name">ナンジャモ SAR</div>
+        <div class="card-price">¥41,400</div>
+        <div class="card-change change-down">-¥7,600</div>
+      </a>
+    </div>
+    <div class="tab-content" id="falling-box">
+      <a href="box/25724.html" class="card">
+        <span class="rank-badge rank-1">1位</span>
+        <img src="images/box_25724.webp" alt="ポケモン切手BOX～見返り美人・月に雁セット～" class="card-img" loading="lazy">
+        <div class="card-name">ポケモン切手BOX～見返り美人・月に雁セット～</div>
+        <div class="card-price">¥457,000</div>
+        <div class="card-change change-down">-¥29,500</div>
+      </a>
+      <a href="box/15595.html" class="card">
+        <span class="rank-badge rank-2">2位</span>
+        <img src="images/box_15595.webp" alt="25th アニバーサリー ゴールデンボックス" class="card-img" loading="lazy">
+        <div class="card-name">25th アニバーサリー ゴールデンボックス</div>
+        <div class="card-price">¥245,000</div>
+        <div class="card-change change-down">-¥14,900</div>
+      </a>
+      <a href="box/135521.html" class="card">
+        <span class="rank-badge rank-3">3位</span>
+        <img src="images/box_135521.webp" alt="クラシック (ポケカクラシック 日本語版)" class="card-img" loading="lazy">
+        <div class="card-name">クラシック (ポケカクラシック 日本語版)</div>
+        <div class="card-price">¥70,000</div>
+        <div class="card-change change-down">-¥3,449</div>
+      </a>
+      <a href="box/846048.html" class="card">
+        <span class="rank-badge rank-4">4位</span>
+        <img src="images/box_846048.webp" alt="拡張パック「ストームエメラルダ」ボックス" class="card-img" loading="lazy">
+        <div class="card-name">拡張パック「ストームエメラルダ」ボックス</div>
+        <div class="card-price">¥14,200</div>
+        <div class="card-change change-down">-¥3,080</div>
+      </a>
+      <a href="box/12879.html" class="card">
+        <span class="rank-badge rank-5">5位</span>
+        <img src="images/box_12879.webp" alt="ソード &amp; シールド 拡張パック 仰天のボルテッカー ボックス" class="card-img" loading="lazy">
+        <div class="card-name">ソード &amp; シールド 拡張パック 仰天のボルテッカー ボックス</div>
+        <div class="card-price">¥51,500</div>
+        <div class="card-change change-down">-¥2,300</div>
+      </a>
+      <a href="box/342761.html" class="card">
+        <span class="rank-badge rank-other">6位</span>
+        <img src="images/box_342761.webp" alt="強化拡張パック「楽園ドラゴーナ」ボックス" class="card-img" loading="lazy">
+        <div class="card-name">強化拡張パック「楽園ドラゴーナ」ボックス</div>
+        <div class="card-price">¥15,000</div>
+        <div class="card-change change-down">-¥1,666</div>
+      </a>
+      <a href="box/105218.html" class="card">
+        <span class="rank-badge rank-other">7位</span>
+        <img src="images/box_105218.webp" alt="プレシャス コレクターボックス ソード&amp;シールド" class="card-img" loading="lazy">
+        <div class="card-name">プレシャス コレクターボックス ソード&amp;シールド</div>
+        <div class="card-price">¥69,399</div>
+        <div class="card-change change-down">-¥1,600</div>
+      </a>
+      <a href="box/14025.html" class="card">
+        <span class="rank-badge rank-other">8位</span>
+        <img src="images/box_14025.webp" alt="拡張パック 25th アニバーサリー コレクション ボックス" class="card-img" loading="lazy">
+        <div class="card-name">拡張パック 25th アニバーサリー コレクション ボックス</div>
+        <div class="card-price">¥72,999</div>
+        <div class="card-change change-down">-¥1,501</div>
+      </a>
+      <a href="box/628146.html" class="card">
+        <span class="rank-badge rank-other">9位</span>
+        <img src="images/box_628146.webp" alt="拡張パック「メガブレイブ」ボックス" class="card-img" loading="lazy">
+        <div class="card-name">拡張パック「メガブレイブ」ボックス</div>
+        <div class="card-price">¥9,500</div>
+        <div class="card-change change-down">-¥1,500</div>
+      </a>
+      <a href="box/628198.html" class="card">
+        <span class="rank-badge rank-other">10位</span>
+        <img src="images/box_628198.webp" alt="ポケモンセンターセット「メガブレイブ」" class="card-img" loading="lazy">
+        <div class="card-name">ポケモンセンターセット「メガブレイブ」</div>
+        <div class="card-price">¥22,000</div>
+        <div class="card-change change-down">-¥1,500</div>
+      </a>
+    </div>
+  </div>
+
+  <p class="note">※ 直近1週間の取引件数が20件以上のカード/BOXのみを対象としています</p>
+</div>
+
+<footer class="common-footer"><a href="report.html">シングル相場</a><a href="box.html">未開封BOX</a><a href="articles/index.html">記事一覧</a><a href="guide.html">使い方ガイド</a><a href="about.html">このサイトについて</a><a href="privacy.html">プライバシーポリシー</a><a href="index-chart.html">ポケカ指数</a><a href="contact.html">お問い合わせ</a><a href="portfolio.html">持ってるリスト管理</a><p>© 2026 ポケカるっく</p></footer><script src="promo.js" defer></script>
+<script>
+function switchTab(section,type,btn){
+  var block=document.getElementById('block-'+section);
+  block.querySelectorAll('.tab-content').forEach(function(el){el.classList.remove('active')});
+  block.querySelectorAll('.tab-btn').forEach(function(el){el.classList.remove('active')});
+  document.getElementById(section+'-'+type).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>

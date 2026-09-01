@@ -1,0 +1,67 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      attempt:
+        description: 'Retry attempt number (auto-incremented)'
+        required: false
+        default: '1'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - name: Retry on failure
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const attempt = parseInt('${{ github.event.inputs.attempt || 1 }}');
+            const maxAttempts = 10;
+            if (attempt >= maxAttempts) {
+              core.setFailed(`Deploy failed after ${maxAttempts} attempts. Giving up.`);
+              return;
+            }
+            core.info(`Deploy failed on attempt ${attempt}. Waiting 60s then retrying (attempt ${attempt + 1}/${maxAttempts})...`);
+            await new Promise(r => setTimeout(r, 60000));
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'deploy-pages.yml',
+              ref: 'main',
+              inputs: { attempt: String(attempt + 1) }
+            });
+            core.info(`Retry dispatched (attempt ${attempt + 1}).`);
