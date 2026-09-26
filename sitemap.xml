@@ -619,13 +619,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/141447.html</loc>
+    <loc>https://pokecalook.com/cards/657364.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/657364.html</loc>
+    <loc>https://pokecalook.com/cards/141447.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -889,13 +889,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/105543.html</loc>
+    <loc>https://pokecalook.com/cards/722241.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/722241.html</loc>
+    <loc>https://pokecalook.com/cards/105543.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1069,13 +1069,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/753274.html</loc>
+    <loc>https://pokecalook.com/cards/387059.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/387059.html</loc>
+    <loc>https://pokecalook.com/cards/753274.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -1465,6 +1465,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://pokecalook.com/cards/742429.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pokecalook.com/cards/122056.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -1472,12 +1478,6 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/93024.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pokecalook.com/cards/742429.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -2389,13 +2389,19 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/127035.html</loc>
+    <loc>https://pokecalook.com/cards/730950.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/730950.html</loc>
+    <loc>https://pokecalook.com/cards/730948.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/127035.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -2408,12 +2414,6 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/708760.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pokecalook.com/cards/730948.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -2875,13 +2875,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/326267.html</loc>
+    <loc>https://pokecalook.com/cards/730949.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/730949.html</loc>
+    <loc>https://pokecalook.com/cards/326267.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -3715,6 +3715,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://pokecalook.com/cards/886017.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pokecalook.com/cards/386919.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -3758,6 +3764,12 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/106799.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/881429.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -3830,6 +3842,12 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/103796.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/882281.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -4129,6 +4147,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://pokecalook.com/cards/881428.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pokecalook.com/cards/91252.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -4160,6 +4184,12 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/284953.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/882280.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -4273,12 +4303,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/886017.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://pokecalook.com/cards/93189.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -4381,6 +4405,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://pokecalook.com/cards/896991.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pokecalook.com/cards/96675.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -4465,12 +4495,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/881429.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://pokecalook.com/cards/128102.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -4478,12 +4502,6 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/332792.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pokecalook.com/cards/882281.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -4567,6 +4585,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://pokecalook.com/cards/882279.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pokecalook.com/cards/704403.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -4633,6 +4657,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://pokecalook.com/cards/896990.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pokecalook.com/cards/753275.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -4694,6 +4724,12 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/132435.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/886019.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -4921,12 +4957,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/881428.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://pokecalook.com/cards/731021.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -4999,12 +5029,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/882280.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://pokecalook.com/cards/91423.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -5017,7 +5041,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/896991.html</loc>
+    <loc>https://pokecalook.com/cards/896992.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -5257,6 +5281,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://pokecalook.com/cards/891194.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/892648.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pokecalook.com/cards/112782.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -5317,12 +5353,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/896990.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://pokecalook.com/cards/408743.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -5342,12 +5372,6 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/120746.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pokecalook.com/cards/886019.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -5395,12 +5419,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/882279.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://pokecalook.com/cards/129023.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -5426,6 +5444,12 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/868614.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/891195.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -5803,12 +5827,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/896992.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://pokecalook.com/cards/730941.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -6019,12 +6037,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/891194.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://pokecalook.com/cards/91525.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -6187,6 +6199,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://pokecalook.com/cards/882282.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pokecalook.com/cards/892680.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -6200,12 +6218,6 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/104575.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pokecalook.com/cards/891195.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -6278,6 +6290,12 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/509418.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/886016.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -6362,6 +6380,12 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/825120.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/891193.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -6458,12 +6482,6 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/104535.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pokecalook.com/cards/892648.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -7219,6 +7237,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://pokecalook.com/cards/892652.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pokecalook.com/cards/91200.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -7226,6 +7250,12 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/93067.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/881431.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -7262,6 +7292,18 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/91379.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/892641.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/897035.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -7406,12 +7448,6 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/104573.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pokecalook.com/cards/891193.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -7580,12 +7616,6 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/210034.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pokecalook.com/cards/882282.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -7813,12 +7843,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/897035.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://pokecalook.com/cards/666716.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -7904,12 +7928,6 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/652790.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pokecalook.com/cards/886016.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -8132,12 +8150,6 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/152787.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pokecalook.com/cards/881431.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -8461,12 +8473,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/892641.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://pokecalook.com/cards/107355.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -8617,7 +8623,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/891185.html</loc>
+    <loc>https://pokecalook.com/cards/881430.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -8708,6 +8714,12 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/91242.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/886018.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -8989,12 +9001,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/892652.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://pokecalook.com/cards/141421.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -9056,6 +9062,12 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/106713.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/891192.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -9134,12 +9146,6 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/128140.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pokecalook.com/cards/881430.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -9775,6 +9781,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://pokecalook.com/cards/891196.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pokecalook.com/cards/105311.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -9847,12 +9859,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/886018.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://pokecalook.com/cards/93316.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -9908,6 +9914,12 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/584795.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/884224.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -10075,12 +10087,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/892710.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://pokecalook.com/cards/132267.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -10142,12 +10148,6 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/742513.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pokecalook.com/cards/882277.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -10226,6 +10226,18 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/868611.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/892710.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/882277.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -10369,12 +10381,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/884224.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://pokecalook.com/cards/450628.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -10442,12 +10448,6 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/96589.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pokecalook.com/cards/896989.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -10562,6 +10562,12 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/892717.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/896989.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -10819,18 +10825,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pokecalook.com/cards/891196.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pokecalook.com/cards/891192.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://pokecalook.com/cards/892660.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -11042,6 +11036,12 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/132285.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/892564.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -11486,12 +11486,6 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/868605.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pokecalook.com/cards/892564.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -12805,6 +12799,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://pokecalook.com/cards/898625.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pokecalook.com/cards/110905.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -12926,12 +12926,6 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/892644.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pokecalook.com/cards/892659.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -13112,6 +13106,12 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/110786.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pokecalook.com/cards/892659.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -13334,12 +13334,6 @@
   </url>
   <url>
     <loc>https://pokecalook.com/cards/868607.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pokecalook.com/cards/898625.html</loc>
     <lastmod>2026-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
