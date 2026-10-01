@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EH0SVLFEJM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EH0SVLFEJM');</script>
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="stylesheet" href="common.css">
+<meta name="keywords" content="ポケカるっく,ポケカルック,ぽけかるっく,ぽけかルック,pokecalook,PokeCalook,ポケモンカード,PSA10,相場,倍率,美品,鑑定">
+<title>お問い合わせ - ポケカるっく</title>
+<meta name="description" content="ポケカるっくへのお問い合わせフォーム。ご意見・ご要望・不具合報告などお気軽にどうぞ。">
+<style>
+.main-content{flex:1;min-width:0;max-width:700px;margin:0 auto}
+h2{font-size:1.3rem;color:#1e40af;margin:28px 0 12px;padding-bottom:8px;border-bottom:3px solid #dbeafe}
+p{margin:8px 0;color:#374151}
+.form-card{background:#fff;border:2px solid #e5e7eb;border-radius:14px;padding:28px 24px;margin:16px 0;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:.9rem;font-weight:700;color:#374151;margin-bottom:6px}
+.form-group label .req{color:#dc2626;margin-left:4px}
+.form-group input,.form-group textarea,.form-group select{
+  width:100%;padding:12px 14px;border:2px solid #d1d5db;border-radius:10px;
+  font-size:.9rem;font-family:inherit;color:#1a1a2e;background:#fff;
+  transition:border-color .15s;
+}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{
+  border-color:#3b82f6;outline:none;box-shadow:0 0 0 3px rgba(59,130,246,.1);
+}
+.form-group textarea{resize:vertical;min-height:160px}
+.submit-btn{
+  display:block;width:100%;padding:14px;border:none;border-radius:10px;
+  background:linear-gradient(135deg,#3b82f6,#1d4ed8);color:#fff;
+  font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit;
+  transition:opacity .15s,transform .15s;
+}
+.submit-btn:hover{opacity:.9;transform:translateY(-1px)}
+.submit-btn:active{transform:translateY(0)}
+.note{font-size:.8rem;color:#6b7280;margin-top:12px;text-align:center}
+@media(max-width:768px){
+  .form-card{padding:20px 16px}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr" style="background:url('images/header-bg.png') center/cover no-repeat"><h1><a href="index.html"><img src="images/logo.png" alt="ポケカるっく" class="logo-img"> ポケカるっく</a></h1><p class="sub">ポケカるっく（ポケカルック / pokecalook）はポケモンカードの相場チェックに役立つ無料データベースです</p></header>
+<nav class="nav-buttons"><a href="index.html" class="nav-btn nav-btn-top">🏠 TOP</a><a href="report.html" class="nav-btn nav-btn-single">🃏 シングル相場</a><a href="box.html" class="nav-btn nav-btn-box">📦 未開封BOX</a><a href="articles/index.html" class="nav-btn nav-btn-articles">📰 記事</a><a href="index-chart.html" class="nav-btn nav-btn-index">📊 ポケカ指数</a><a href="portfolio.html" class="nav-btn nav-btn-portfolio">📋 持ってるリスト</a></nav>
+
+<div class="main-content">
+
+<p style="text-align:center;color:#6b7280;font-size:.85rem;margin-bottom:8px">ご意見・ご要望・不具合報告などお気軽にどうぞ。</p>
+<p style="text-align:center;color:#9ca3af;font-size:.75rem;margin-bottom:20px">※ すべてのお問い合わせに個別にご返信できない場合がございます。予めご了承ください。</p>
+
+<div class="form-card">
+  <form action="https://formspree.io/f/xwpkgjvr" method="POST">
+    <div class="form-group">
+      <label>お名前（ニックネーム可）<span class="req">*</span></label>
+      <input type="text" name="name" required placeholder="例: ポケカ太郎">
+    </div>
+    <div class="form-group">
+      <label>メールアドレス<span class="req">*</span></label>
+      <input type="email" name="email" required placeholder="例: example@mail.com">
+    </div>
+    <div class="form-group">
+      <label>お問い合わせ種別</label>
+      <select name="category">
+        <option value="ご意見・ご要望">ご意見・ご要望</option>
+        <option value="不具合報告">不具合報告</option>
+        <option value="データに関する質問">データに関する質問</option>
+        <option value="その他">その他</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>お問い合わせ内容<span class="req">*</span></label>
+      <textarea name="message" required placeholder="お問い合わせ内容をご記入ください"></textarea>
+    </div>
+    <button type="submit" class="submit-btn">送信する</button>
+  </form>
+  <p class="note">送信後、確認メールが届きます。届かない場合はメールアドレスをご確認ください。</p>
+</div>
+
+<h2>よくあるご質問</h2>
+<div class="form-card">
+  <p><strong>Q. データはどこから取得していますか？</strong></p>
+  <p>A. 国内フリマサイトの取引成立済みデータをもとに集計しています。詳しくは<a href="about.html" style="color:#3b82f6">このサイトについて</a>をご覧ください。</p>
+  <p style="margin-top:16px"><strong>Q. 特定のカードを追加してほしい</strong></p>
+  <p>A. 取引データが一定数以上あるカードは自動的に追加されます。まだ掲載されていないカードは取引件数が不足している可能性があります。</p>
+  <p style="margin-top:16px"><strong>Q. 価格が実際と違う気がする</strong></p>
+  <p>A. 表示価格は直近7日間の取引中央値です。出品価格ではなく成立価格のため、現在の出品価格とは異なる場合があります。</p>
+</div>
+
+</div>
+
+<footer class="common-footer"><a href="report.html">シングル相場</a><a href="box.html">未開封BOX</a><a href="articles/index.html">記事一覧</a><a href="guide.html">使い方ガイド</a><a href="about.html">このサイトについて</a><a href="privacy.html">プライバシーポリシー</a><a href="index-chart.html">ポケカ指数</a><a href="contact.html">お問い合わせ</a><a href="portfolio.html">持ってるリスト管理</a><p>© 2026 ポケカるっく</p></footer><script src="promo.js" defer></script>
+</body>
+</html>

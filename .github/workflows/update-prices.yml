@@ -1,0 +1,175 @@
+name: Update Prices
+
+on:
+  schedule:
+    # 毎日 日本時間 03:00 (UTC 18:17)
+    - cron: '17 18 * * *'
+  workflow_dispatch:
+    inputs:
+      html_only:
+        description: 'HTMLのみ再生成（データ取得スキップ）'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180  # step2が長いので3時間
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk >/dev/null 2>&1
+          pip install requests Pillow
+
+      - name: Install Playwright
+        if: ${{ github.event.inputs.html_only != 'true' }}
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+          # M PLUS Rounded 1c フォント（かわいい丸ゴシック）
+          mkdir -p /usr/share/fonts/mplus
+          wget -q -O /usr/share/fonts/mplus/MPLUSRounded1c-Bold.ttf "https://github.com/google/fonts/raw/main/ofl/mplusrounded1c/MPLUSRounded1c-Bold.ttf"
+          fc-cache -f
+
+      - name: Download price cache from release
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # 最新のキャッシュリリースからダウンロード
+          gh release download price-cache \
+            --pattern 'price_data_api.json' \
+            --pattern 'product_links.json' \
+            --pattern 'box_price_data.json' \
+            --pattern 'box_product_links.json' \
+            --dir . \
+            --clobber 2>/dev/null || echo "No cache found, starting fresh"
+
+      - name: Step 1 - Collect product links
+        if: ${{ github.event.inputs.html_only != 'true' }}
+        run: |
+          for i in 1 2 3; do
+            python step1_collect_links.py --pages 500 && break
+            echo "Step1失敗 (try $i)、5分待機..."
+            sleep 300
+          done
+
+      - name: Step 2 - Fetch price data via API
+        if: ${{ github.event.inputs.html_only != 'true' }}
+        run: |
+          for i in 1 2 3; do
+            python step2_api.py && break
+            echo "Step2失敗 (try $i)、5分待機..."
+            sleep 300
+          done
+
+      - name: Step 2b - Fetch PSA Pop Report
+        if: ${{ github.event.inputs.html_only != 'true' }}
+        continue-on-error: true
+        run: python step2b_psa.py
+
+      - name: Retrim card images
+        run: python retrim_images.py
+
+      - name: Step 1 BOX - Collect BOX product links
+        if: ${{ github.event.inputs.html_only != 'true' }}
+        continue-on-error: true
+        run: python step1_box_links.py --pages 50
+
+      - name: Step 2 BOX - Fetch BOX price data
+        if: ${{ github.event.inputs.html_only != 'true' }}
+        continue-on-error: true
+        run: python step2_box_api.py
+
+      - name: Step 3 - Generate HTML report
+        run: python step3_report.py
+
+      - name: Step 3 BOX - Generate BOX HTML report
+        continue-on-error: true
+        run: |
+          if [ -f box_price_data.json ]; then
+            python step3_box_report.py
+          else
+            echo "box_price_data.json not found, skipping BOX report"
+          fi
+
+      - name: Generate top page (index.html)
+        run: python step3_top.py
+
+      - name: Generate articles
+        run: python step3_articles.py
+
+      - name: Build static pages
+        run: python build_static.py
+
+      - name: Step 5 - Generate index chart
+        if: ${{ github.event.inputs.html_only != 'true' }}
+        run: python step5_index.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html report.html cards/ articles/ sitemap.xml portfolio.html images/ CNAME index-chart.html index_history.json guide.html about.html contact.html privacy.html
+          if [ -f box.html ]; then git add box.html; fi
+          if [ -d box ]; then git add box/; fi
+          git diff --staged --quiet || {
+            git commit -m "Update prices $(date -u +%Y-%m-%d)"
+            for i in 1 2 3; do
+              if git push; then
+                echo "Push成功 (try $i)"
+                break
+              fi
+              echo "Push失敗、rebase 実行 (try $i)"
+              git pull --rebase --autostash origin main || {
+                echo "Rebase conflict detected, resolving..."
+                git checkout --theirs . 2>/dev/null || true
+                git add -A
+                git rebase --continue || git rebase --skip
+              }
+              if [ $i -eq 3 ]; then
+                echo "最大試行回数に達しました"
+                exit 1
+              fi
+            done
+          }
+
+      - name: Upload price cache to release
+        if: ${{ github.event.inputs.html_only != 'true' }}
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # キャッシュをGitHub Releaseにアップロード（リポジトリ肥大化防止）
+          gh release delete price-cache --yes 2>/dev/null || true
+          gh release create price-cache \
+            --title "Price Data Cache" \
+            --notes "Auto-updated price cache (do not delete)" \
+            price_data_api.json product_links.json box_price_data.json box_product_links.json
+
+      - name: Trigger deploy
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run deploy-pages.yml --ref main
+
+      - name: Trigger Generate Tweet Texts
+        if: ${{ github.event.inputs.html_only != 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run auto-tweet.yml --ref main
