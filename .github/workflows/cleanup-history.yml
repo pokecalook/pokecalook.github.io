@@ -1,0 +1,43 @@
+name: Cleanup Git History
+
+on:
+  schedule:
+    # 毎月1日 JST 03:00 (UTC 18:00 前日)
+    - cron: '0 18 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Squash all history into single commit
+        run: |
+          set -ex
+          git config http.postBuffer 524288000
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          echo "=== Creating orphan branch ==="
+          git checkout --orphan temp-branch
+          echo "=== Adding all files ==="
+          git add -A
+          echo "=== Committing ==="
+          git commit -m "Reset history $(date -u +%Y-%m-%d)"
+          echo "=== Deleting old main ==="
+          git branch -D main
+          echo "=== Renaming to main ==="
+          git branch -m main
+          echo "=== Force pushing ==="
+          git push -f origin main
+          echo "=== GC ==="
+          git gc --aggressive --prune=now
+          echo "=== Done ==="

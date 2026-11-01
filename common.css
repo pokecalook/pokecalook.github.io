@@ -1,0 +1,40 @@
+/* ポケカるっく 共通CSS */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fffbf0;color:#1a1a2e;padding:16px;line-height:1.8}
+.hdr{text-align:center;margin-bottom:20px;padding:60px 16px;border-radius:14px;position:relative;overflow:hidden}
+.hdr::before{content:'';position:absolute;inset:0;background:rgba(255,251,240,.15);border-radius:14px}
+.hdr>*{position:relative;z-index:1}
+.hdr h1{font-size:2.4rem;color:#e8941a;font-weight:900;text-shadow:-2px -2px 0 #fff,2px -2px 0 #fff,-2px 2px 0 #fff,2px 2px 0 #fff,-2px 0 0 #fff,2px 0 0 #fff,0 -2px 0 #fff,0 2px 0 #fff,0 4px 10px rgba(232,148,26,.4);display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+.hdr h1 a{color:inherit;text-decoration:none}
+.hdr h1 a:hover{opacity:.8}
+.hdr .logo-img{width:80px;height:80px;border-radius:50%;background:#e8941a;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.hdr .sub{color:#374151;font-size:.85rem;font-weight:600;background:rgba(255,255,255,.85);display:inline-block;padding:4px 16px;border-radius:20px;margin-top:8px}
+.nav-buttons{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:16px 0 24px}
+.nav-btn{
+  display:inline-flex;align-items:center;gap:4px;
+  padding:10px 18px;border-radius:10px;font-size:.85rem;font-weight:700;
+  text-decoration:none;border:2.5px solid transparent;transition:opacity .2s,transform .15s;
+}
+.nav-btn:hover{opacity:0.85;transform:translateY(-1px)}
+.nav-btn.active{background:#374151!important;color:#fff!important;border-color:#374151!important}
+.nav-btn-top{background:#fff;color:#374151;border-color:#374151}
+.nav-btn-top.active{background:#374151!important;color:#fff!important;border-color:#374151!important}
+.nav-btn-single{background:#fff;color:#ea580c;border-color:#ea580c}
+.nav-btn-single.active{background:#ea580c!important;color:#fff!important;border-color:#ea580c!important}
+.nav-btn-box{background:#fff;color:#2563eb;border-color:#2563eb}
+.nav-btn-box.active{background:#2563eb!important;color:#fff!important;border-color:#2563eb!important}
+.nav-btn-articles{background:#fff;color:#db2777;border-color:#db2777}
+.nav-btn-articles.active{background:#db2777!important;color:#fff!important;border-color:#db2777!important}
+.nav-btn-index{background:#fff;color:#059669;border-color:#059669}
+.nav-btn-index.active{background:#059669!important;color:#fff!important;border-color:#059669!important}
+.nav-btn-portfolio{background:#fff;color:#7c3aed;border-color:#7c3aed}
+.nav-btn-portfolio.active{background:#7c3aed!important;color:#fff!important;border-color:#7c3aed!important}
+.common-footer{text-align:center;padding:20px;margin-top:20px;font-size:.75rem;color:#6b7280}
+.common-footer a{color:#6b7280;text-decoration:none;margin:0 8px}
+.common-footer a:hover{color:#374151}
+.common-footer p{margin-top:6px}
+@media(max-width:768px){
+  body{padding:8px}
+  .hdr h1{font-size:1.3rem}
+  .hdr{padding:40px 12px}
+}

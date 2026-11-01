@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head><meta charset="utf-8"><title>広告テスト</title></head>
+<body style="font-family:sans-serif;padding:20px;background:#fffbf0">
+<h2>アドブロック貫通テスト</h2>
+<p>以下のバナーが表示されていれば貫通しています。</p>
+
+<h3>パターンA: 現状（images/ad/ + サイズ属性あり）</h3>
+<a href="go/toretoku-buy2.html"><img border="0" width="300" height="250" alt="トレトク買取" src="images/ad/toretoku_300x250.gif" style="max-width:100%;height:auto"></a>
+
+<h3>パターンB: パス変更のみ（images/直下リネーム + サイズ属性あり）</h3>
+<a href="go/toretoku-buy2.html"><img border="0" width="300" height="250" alt="トレトク買取" src="images/ptn-toretoku1.gif" style="max-width:100%;height:auto"></a>
+
+<h3>パターンC: パス変更 + サイズ属性なし（CSS制御）</h3>
+<a href="go/toretoku-buy2.html"><img border="0" alt="" src="images/ptn-toretoku1.gif" style="max-width:300px;height:auto"></a>
+
+<h3>パターンD: パス変更 + サイズ属性なし + alt空 + class無し</h3>
+<a href="go/toretoku-buy2.html" style="display:inline-block"><img src="images/ptn-toretoku1.gif" style="max-width:300px;height:auto"></a>
+
+<h3>パターンE: テキストリンクのみ</h3>
+<a href="go/toretoku-buy.html" target="_blank" style="display:inline-block;padding:10px 20px;background:#fff;border:2px solid #6ee7b7;border-radius:8px;color:#065f46;font-weight:600;text-decoration:none">📦 トレトクで売る</a>
+
+<p style="margin-top:40px;color:#999">A〜Eのどれが見えてどれが消えてるか教えてください。</p>
+</body>
+</html>

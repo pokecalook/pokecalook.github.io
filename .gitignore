@@ -1,0 +1,15 @@
+# キャッシュ・データファイル（GitHub Releaseで管理）
+price_data_api.json
+product_links.json
+psa_pop_cache.json
+box_price_data.json
+box_product_links.json
+
+# Python
+__pycache__/
+*.pyc
+
+# 一時ファイル
+_compare_gemrate.py
+_watcher.log
+_watcher.ps1
